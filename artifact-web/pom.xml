@@ -111,6 +111,24 @@
 
 	<profiles>
 		<profile>
+			<id>jenkins</id>
+			<activation>
+				<property>
+					<name>build</name>
+					<value>jenkins</value>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.cargo</groupId>
+						<artifactId>cargo-maven2-plugin</artifactId>
+						<version>${cargo.version}</version>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
 			<id>dev</id>
 			<activation>
 				<property>

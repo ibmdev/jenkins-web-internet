@@ -72,6 +72,9 @@
 
             <!-- Reporting -->
         <findbugs.version>3.0.4</findbugs.version>
+        
+        <!-- Cargo -->
+        <cargo.version>1.6.5</cargo.version>
 
     </properties>
 
