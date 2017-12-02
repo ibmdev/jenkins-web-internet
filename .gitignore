@@ -1,0 +1,9 @@
+artifact-web/node_modules/
+artifact-web/src/main/webapp/components/
+artifact-web/src/main/webapp/build/
+artifact-service/.settings/
+*.project
+*.factorypath
+*.classpath
+artifact-web/.settings/
+.settings/
