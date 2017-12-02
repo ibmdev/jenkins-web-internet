@@ -10,4 +10,13 @@
       </fileset>
     </copy>
   </target>  
+
+<target name="startJBossEAP">
+	<exec executable="F:\developpement\git\Jenkins\jboss-eap-6.3\bin\standalone.bat" spawn="true"/>
+	<echo>Waiting to start</echo>
+	<waitfor maxwait="10" maxwaitunit="second" checkevery="5000">
+	    <http url="http://localhost:8080/artifact-web" />
+	</waitfor>
+	<echo>Server started</echo>
+</target>
 </project> 
