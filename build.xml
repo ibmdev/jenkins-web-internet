@@ -11,7 +11,4 @@
     </copy>
   </target>  
 
-<target name="startJBossEAP">
-	<exec executable="F:\developpement\git\Jenkins\jboss-eap-6.3\bin\standalone.bat" spawn="true" timeout="60000"/>
-</target>
 </project> 
