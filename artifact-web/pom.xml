@@ -124,6 +124,12 @@
 						<groupId>org.codehaus.cargo</groupId>
 						<artifactId>cargo-maven2-plugin</artifactId>
 						<version>${cargo.version}</version>
+						<executions>
+							<execution>
+								<id>Start JBoss Server</id>
+								<phase>test</phase>
+							</execution>
+						</executions>
 					</plugin>
 				</plugins>
 			</build>
