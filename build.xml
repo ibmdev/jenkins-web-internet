@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Jenkins Deploy EAR" default="deployEAR" basedir="."> 
+  <!-- =================================================================== --> 
+  <!-- Initialisation --> 
+  <!-- =================================================================== --> 
+  <target name="deployEAR"> 
+  <copy todir="F:\developpement\git\Jenkins\jboss-eap-6.3\standalone\deployments" >
+      <fileset dir="F:\developpement\git\Jenkins\jenkins-web-internet\artifact-ear\target" >
+        <include name="artifact-ear.ear"/>
+      </fileset>
+    </copy>
+    
+  </target>  
+</project> 
