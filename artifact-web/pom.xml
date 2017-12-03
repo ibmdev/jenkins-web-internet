@@ -170,7 +170,7 @@
 								</deployables>
 								</configuration>
 								<goals>
-									<goal>run</goal>
+									<goal>start</goal>
 								</goals>
 							</execution>
 						</executions>
