@@ -132,7 +132,7 @@
 								<phase>pre-clean</phase>
 								<configuration>
 								<target>
-									<ant antfile="${basedir}/build.xml">
+									<ant antfile="${project.parent.basedir}/build.xml">
 									<target name="uninstallEAR"/>
 									</ant>
 								</target>
@@ -146,7 +146,7 @@
 								<phase>pre-integration-test</phase>
 								<configuration>
 								<target>
-									<ant antfile="${basedir}/build.xml">
+									<ant antfile="${project.parent.basedir}/build.xml">
 									<target name="deployEAR"/>
 									</ant>
 								</target>
