@@ -157,7 +157,7 @@
 									</container>
 								<configuration>
 									<type>existing</type>
-    								<home>F:\developpement\git\Jenkins\jboss-eap-6.3</home>
+    								<home>F:\developpement\git\Jenkins\jboss-eap-6.3\standalone</home>
 								<properties>
 									<cargo.servlet.port>8080</cargo.servlet.port>
 								</properties>
