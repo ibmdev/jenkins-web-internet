@@ -167,7 +167,7 @@
 									<deployable>
       									<groupId>com.ibm.artifact</groupId>
 										<artifactId>artifact-web</artifactId>
-										<type>web</type>
+										<type>war</type>
 										<pingURL>http://localhost:8080/artifact-web/index.jsp</pingURL>
 										<pingTimeout>5000</pingTimeout>
 									</deployable>
