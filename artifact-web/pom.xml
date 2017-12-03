@@ -162,6 +162,13 @@
 									<cargo.servlet.port>8080</cargo.servlet.port>
 								</properties>
 								</configuration>
+								<deployables>
+									<deployable>
+      									<groupId>com.ibm.artifact</groupId>
+      									<artifactId>artifact</artifactId>
+								      	<type>ear</type>
+								    </deployable>
+								</deployables>
 								</configuration>
 								<goals>
 									<goal>start</goal>
