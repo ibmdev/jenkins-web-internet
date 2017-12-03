@@ -15,11 +15,12 @@ JDK : 8
 ANT : 1.10.1
 Maven : 3.5
 settings.xml : 
-
+```xml
 <activeProfiles>
 			<activeProfile>dev</activeProfile>
 			<activeProfile>jenkins</activeProfile>
 </activeProfiles>
+```
 
 Repository local : file:///F:\developpement\git\Jenkins\jenkins-web-internet
 Nom de la branche courante : */master
