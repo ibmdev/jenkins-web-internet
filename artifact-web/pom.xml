@@ -149,7 +149,7 @@
 							<!-- Start JBoss Server -->
 							<execution>
 								<id>Start JBoss Server</id>
-								<phase>pre-integration-test</phase>
+								<phase>install</phase>
 								<configuration>
 									<container>
 										<containerId>jboss74x</containerId>
@@ -157,7 +157,7 @@
 									</container>
 								<configuration>
 									<type>standalone</type>
-    								<home>${project.build.directory}/jboss74x</home>
+    								<home>F:\developpement\git\Jenkins\jboss-eap-6.3</home>
 								<properties>
 									<cargo.servlet.port>8080</cargo.servlet.port>
 								</properties>
