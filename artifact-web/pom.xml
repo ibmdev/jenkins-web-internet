@@ -164,7 +164,7 @@
 								</configuration>
 								<deployables>
 									<deployable>
-      									<location>F:\developpement\git\Jenkins\jboss-eap-6.3\standalone\deployments\artifact-ear.ear</location>
+      									<location>F:\developpement\git\Jenkins\jboss-eap-6.3\standalone\deployments\artifact-ear.war</location>
 								    </deployable>
 								</deployables>
 								</configuration>
