@@ -148,7 +148,7 @@
 							</execution>
 							<!-- Start JBoss Server -->
 							<execution>
-								<id>Stop JBoss Server</id>
+								<id>Start JBoss Server</id>
 								<phase>post-clean</phase>
 								<configuration>
 									<container>
