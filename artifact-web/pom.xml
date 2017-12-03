@@ -124,10 +124,11 @@
 						<groupId>org.codehaus.cargo</groupId>
 						<artifactId>cargo-maven2-plugin</artifactId>
 						<version>${cargo.version}</version>
+						<!-- Stop JBoss Server -->
 						<executions>
 							<execution>
-								<id>Start JBoss Server</id>
-								<phase>test</phase>
+								<id>Stop JBoss Server</id>
+								<phase>pre-clean</phase>
 								<configuration>
 									<container>
 										<containerId>jboss74x</containerId>
@@ -143,6 +144,27 @@
 								</configuration>
 								<goals>
 									<goal>stop</goal>
+								</goals>
+							</execution>
+							<!-- Start JBoss Server -->
+							<execution>
+								<id>Stop JBoss Server</id>
+								<phase>post-clean</phase>
+								<configuration>
+									<container>
+										<containerId>jboss74x</containerId>
+										<home>F:\developpement\git\Jenkins\jboss-eap-6.3</home>
+									</container>
+								<configuration>
+									<type>standalone</type>
+    								<home>${project.build.directory}/jboss74x</home>
+								<properties>
+									<cargo.servlet.port>8080</cargo.servlet.port>
+								</properties>
+								</configuration>
+								</configuration>
+								<goals>
+									<goal>start</goal>
 								</goals>
 							</execution>
 						</executions>
