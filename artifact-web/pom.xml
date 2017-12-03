@@ -156,7 +156,7 @@
 										<home>F:\developpement\git\Jenkins\jboss-eap-6.3</home>
 									</container>
 								<configuration>
-									<type>remote</type>
+									<type>existing</type>
     								<home>F:\developpement\git\Jenkins\jboss-eap-6.3</home>
 								<properties>
 									<cargo.servlet.port>8080</cargo.servlet.port>
