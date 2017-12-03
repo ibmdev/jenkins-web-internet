@@ -1,6 +1,8 @@
 # jenkins-web-internet
 
+```xml
 URL Localhost : http://localhost:8080/artifact-web/index.jsp
+```
 
 # Mise à jour informations git
 
@@ -31,11 +33,12 @@ Nom de la branche courante : */master
 
 ## Batch Windows
 
-echo ********************** Start Continuous Integration ***************************************
+```xml
 mvn clean install -Dbuild=jenkins
+```
 
 ## Script Shell
 
-echo ********************** Stop Jenkins JOB  ***************************************
-
+```xml
 curl --request POST -u admin:admin "http://localhost:8180/jenkins/job/jenkins-web-internet/lastBuild/stop"
+```
