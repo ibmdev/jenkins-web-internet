@@ -166,8 +166,8 @@
 								<deployables>
 									<deployable>
       									<groupId>com.ibm.artifact</groupId>
-										<artifactId>artifact-ear</artifactId>
-										<type>ear</type>
+										<artifactId>artifact-web</artifactId>
+										<type>web</type>
 										<pingURL>http://localhost:8080/artifact-web/index.jsp</pingURL>
 										<pingTimeout>5000</pingTimeout>
 									</deployable>
