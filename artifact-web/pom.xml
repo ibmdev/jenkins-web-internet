@@ -135,8 +135,8 @@
 										<home>F:\developpement\git\Jenkins\jboss-eap-6.3</home>
 									</container>
 								<configuration>
-									<type>standalone</type>
-    								<home>${project.build.directory}/jboss74x</home>
+									<type>existing</type>
+    								<home>F:\developpement\git\Jenkins\jboss-eap-6.3\standalone</home>
 								<properties>
 									<cargo.servlet.port>8080</cargo.servlet.port>
 								</properties>
@@ -156,8 +156,8 @@
 										<home>F:\developpement\git\Jenkins\jboss-eap-6.3</home>
 									</container>
 								<configuration>
-									<type>standalone</type>
-    								<home>${project.build.directory}/jboss74x</home>
+									<type>existing</type>
+    								<home>F:\developpement\git\Jenkins\jboss-eap-6.3\standalone</home>
 
 								<properties>
 									<cargo.servlet.port>8080</cargo.servlet.port>
@@ -165,8 +165,12 @@
 								</configuration>
 								<deployables>
 									<deployable>
-      									<location>F:\developpement\git\Jenkins\jboss-eap-6.3\standalone\deployments\artifact-ear.ear</location>
-								    </deployable>
+      									<groupId>com.ibm.artifact</groupId>
+										<artifactId>artifact-ear</artifactId>
+										<type>ear</type>
+										<pingURL>http://localhost:8080/artifact-web/index.jsp</pingURL>
+										<pingTimeout>5000</pingTimeout>
+									</deployable>
 								</deployables>
 								</configuration>
 								<goals>
