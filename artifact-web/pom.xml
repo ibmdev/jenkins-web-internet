@@ -128,7 +128,7 @@
 						<executions>
 							<execution>
 								<id>Stop JBoss Server</id>
-								<phase>pre-clean</phase>
+								<phase>test</phase>
 								<configuration>
 									<container>
 										<containerId>jboss74x</containerId>
@@ -162,6 +162,17 @@
 									<cargo.servlet.port>8080</cargo.servlet.port>
 								</properties>
 								</configuration>
+								<deployer />
+								<deployables>
+									<deployable>
+										<groupId>com.ibm.artifact</groupId>
+										<artifactId>artifact</artifactId>
+										<type>ear</type>
+										<properties>
+											<context>artifact-web</context>
+										</properties>
+									</deployable>
+								</deployables>
 								</configuration>
 								<goals>
 									<goal>start</goal>
