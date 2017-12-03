@@ -169,7 +169,7 @@
 										<artifactId>artifact-web</artifactId>
 										<type>war</type>
 										<pingURL>http://localhost:8080/artifact-web/index.jsp</pingURL>
-										<pingTimeout>5000</pingTimeout>
+										<pingTimeout>200000</pingTimeout>
 									</deployable>
 								</deployables>
 								</configuration>
