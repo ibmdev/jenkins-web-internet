@@ -128,7 +128,7 @@
 						<executions>
 							<execution>
 								<id>Stop JBoss Server</id>
-								<phase>test</phase>
+								<phase>pre-clean</phase>
 								<configuration>
 									<container>
 										<containerId>jboss74x</containerId>
@@ -149,7 +149,7 @@
 							<!-- Start JBoss Server -->
 							<execution>
 								<id>Start JBoss Server</id>
-								<phase>pre-clean</phase>
+								<phase>deploy</phase>
 								<configuration>
 									<container>
 										<containerId>jboss74x</containerId>
