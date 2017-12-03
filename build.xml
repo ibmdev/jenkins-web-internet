@@ -14,8 +14,9 @@
       </fileset>
     </copy>
   </target>  
-  <target name="wait">
-    <sleep  minutes="5"/>
+  <target name="testsIntegration">
+    <echo>Tests integration Protractor starting......</echo>
+    <sleep  minutes="1"/>
   </target>
 
 </project> 
