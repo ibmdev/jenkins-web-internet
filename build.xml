@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project name="Jenkins Deploy EAR" default="deployEAR" basedir="."> 
 	<target name="uninstallEAR">
-		<delete file="F:\developpement\git\Jenkins\jboss-eap-6.3\standalone\deployments\artifact-ear.ear" />
+    <delete>
+      <fileset dir="F:\developpement\git\Jenkins\jboss-eap-6.3\standalone\deployments">
+        <include name="*"/>
+      </fileset>
+    </delete>
 	</target>
   <target name="deployEAR"> 
   <copy todir="F:\developpement\git\Jenkins\jboss-eap-6.3\standalone\deployments" >
-      <fileset dir="F:\developpement\git\Jenkins\jenkins-web-internet\artifact-ear\target" >
-        <include name="artifact-ear.ear"/>
+      <fileset dir="F:\developpement\git\Jenkins\jenkins-web-internet\artifact-web\target" >
+        <include name="artifact-web.war"/>
       </fileset>
     </copy>
   </target>  
   <target name="wait">
-  <sleep  minutes="5"/>
+    <sleep  minutes="5"/>
   </target>
 
 </project> 

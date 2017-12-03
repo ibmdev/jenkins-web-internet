@@ -120,6 +120,44 @@
 			</activation>
 			<build>
 				<plugins>
+
+					<!-- Ant Plugin -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>${maven.ant.plugin.version}</version>
+						<executions>
+							<execution>
+								<id>uninstallEAR</id>
+								<phase>pre-clean</phase>
+								<configuration>
+								<target>
+									<ant antfile="${basedir}/build.xml">
+									<target name="uninstallEAR"/>
+									</ant>
+								</target>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>deployEAR</id>
+								<phase>pre-integration-test</phase>
+								<configuration>
+								<target>
+									<ant antfile="${basedir}/build.xml">
+									<target name="deployEAR"/>
+									</ant>
+								</target>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<!-- Cargo Plugin-->
 					<plugin>
 						<groupId>org.codehaus.cargo</groupId>
 						<artifactId>cargo-maven2-plugin</artifactId>
@@ -149,7 +187,7 @@
 							<!-- Start JBoss Server -->
 							<execution>
 								<id>Start JBoss Server</id>
-								<phase>pre-integration-test</phase>
+								<phase>integration-test</phase>
 								<configuration>
 									<container>
 										<containerId>jboss74x</containerId>

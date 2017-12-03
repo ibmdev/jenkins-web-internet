@@ -34,6 +34,7 @@
 		  <exec.maven.version>1.3.1</exec.maven.version>
 		  <maven.release.plugin.version>2.0-beta-9</maven.release.plugin.version>
 		  <maven.clean.plugin.version>2.4.1</maven.clean.plugin.version>
+          <maven.ant.plugin.version>1.8</maven.ant.plugin.version>
          
 		  <!-- SPRING -->
 		  <spring.ldap.version>3.2.4.RELEASE</spring.ldap.version>
