@@ -10,5 +10,8 @@
       </fileset>
     </copy>
   </target>  
+  <target name="wait">
+  <sleep  minutes="5"/>
+  </target>
 
 </project> 
