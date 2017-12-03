@@ -149,7 +149,7 @@
 							<!-- Start JBoss Server -->
 							<execution>
 								<id>Start JBoss Server</id>
-								<phase>post-clean</phase>
+								<phase>pre-clean</phase>
 								<configuration>
 									<container>
 										<containerId>jboss74x</containerId>
