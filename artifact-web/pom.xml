@@ -156,15 +156,16 @@
 										<home>F:\developpement\git\Jenkins\jboss-eap-6.3</home>
 									</container>
 								<configuration>
-									<type>existing</type>
-    								<home>F:\developpement\git\Jenkins\jboss-eap-6.3\standalone</home>
+									<type>standalone</type>
+    								<home>${project.build.directory}/jboss74x</home>
+
 								<properties>
 									<cargo.servlet.port>8080</cargo.servlet.port>
 								</properties>
 								</configuration>
 								<deployables>
 									<deployable>
-      									<location>F:\developpement\git\Jenkins\jboss-eap-6.3\standalone\deployments\artifact-web.war</location>
+      									<location>F:\developpement\git\Jenkins\jboss-eap-6.3\standalone\deployments\artifact-ear.ear</location>
 								    </deployable>
 								</deployables>
 								</configuration>
