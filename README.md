@@ -4,26 +4,30 @@ URL Localhost : http://localhost:8080/artifact-web/index.jsp
 
 # Mise à jour informations git
 
+```xml
 git config --global user.name "ibmdev"
 
 git config --global user.email "ibmdev102017@gmail.com"
+```
 
 # Build Jenkins
 
+```xml
 Software Requirements : 
 JDK : 8
 ANT : 1.10.1
 Maven : 3.5
 settings.xml : 
-```xml
+
 <activeProfiles>
 			<activeProfile>dev</activeProfile>
 			<activeProfile>jenkins</activeProfile>
 </activeProfiles>
-```
 
 Repository local : file:///F:\developpement\git\Jenkins\jenkins-web-internet
+
 Nom de la branche courante : */master
+```
 
 ## Batch Windows
 
