@@ -10,15 +10,27 @@ git config --global user.email "ibmdev102017@gmail.com"
 
 # Build Jenkins
 
+Software Requirements : 
+JDK : 8
+ANT : 1.10.1
+Maven : 3.5
+settings.xml : 
+
+<activeProfiles>
+			<activeProfile>dev</activeProfile>
+			<activeProfile>jenkins</activeProfile>
+</activeProfiles>
+
+Repository local : file:///F:\developpement\git\Jenkins\jenkins-web-internet
+Nom de la branche courante : */master
+
 ## Batch Windows
 
-echo ********************** Start Build EAR ***************************************
-mvn clean install
-echo ********************** Deploy EAR  ***************************************
-echo ********************** Starting server JBOSS EAP 6.3 ***************************************
-start cmd.exe @cmd /k F:\developpement\git\Jenkins\jboss-eap-6.3\bin\standalone.bat
+echo ********************** Start Continuous Integration ***************************************
+mvn clean install -Dbuild=jenkins
 
 ## Script Shell
 
-echo ********************** END Jenkins JOB  ***************************************
+echo ********************** Stop Jenkins JOB  ***************************************
+
 curl --request POST -u admin:admin "http://localhost:8180/jenkins/job/jenkins-web-internet/lastBuild/stop"
