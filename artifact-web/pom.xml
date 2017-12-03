@@ -131,12 +131,14 @@
 								<configuration>
 									<container>
 										<containerId>jboss74x</containerId>
+										<home>F:\developpement\git\Jenkins\jboss-eap-6.3</home>
 									</container>
 								<configuration>
+									<type>standalone</type>
+    								<home>${project.build.directory}/jboss74x</home>
 								<properties>
 									<cargo.servlet.port>8080</cargo.servlet.port>
 								</properties>
-								<home>F:\developpement\git\Jenkins\jboss-eap-6.3</home>
 								</configuration>
 								</configuration>
 								<goals>
