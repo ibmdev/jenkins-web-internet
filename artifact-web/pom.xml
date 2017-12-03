@@ -164,9 +164,7 @@
 								</configuration>
 								<deployables>
 									<deployable>
-      									<groupId>com.ibm.artifact</groupId>
-      									<artifactId>artifact</artifactId>
-								      	<type>ear</type>
+      									<location>F:\developpement\git\Jenkins\jboss-eap-6.3\standalone\deployments\artifact-ear.ear</location>
 								    </deployable>
 								</deployables>
 								</configuration>
