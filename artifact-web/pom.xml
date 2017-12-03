@@ -149,7 +149,7 @@
 							<!-- Start JBoss Server -->
 							<execution>
 								<id>Start JBoss Server</id>
-								<phase>deploy</phase>
+								<phase>post-install</phase>
 								<configuration>
 									<container>
 										<containerId>jboss74x</containerId>
