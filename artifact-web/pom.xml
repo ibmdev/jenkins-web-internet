@@ -9,13 +9,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>artifact-web</artifactId>
 	<packaging>war</packaging>
-
-
 	<dependencies>
-
-		
-		
-
 
 		<!-- Logging -->
 
@@ -135,11 +129,11 @@
 								<configuration>
 									<container>
 										<containerId>jboss74x</containerId>
-										<home>F:\developpement\git\Jenkins\jboss-eap-6.3</home>
+										<home>${server.jboss.url}</home>
 									</container>
 								<configuration>
 									<type>existing</type>
-    								<home>F:\developpement\git\Jenkins\jboss-eap-6.3\standalone</home>
+    								<home>${server.jboss.url}/standalone</home>
 								<properties>
 									<cargo.servlet.port>8080</cargo.servlet.port>
 								</properties>
@@ -156,11 +150,11 @@
 								<configuration>
 									<container>
 										<containerId>jboss74x</containerId>
-										<home>F:\developpement\git\Jenkins\jboss-eap-6.3</home>
+										<home>${server.jboss.url}</home>
 									</container>
 								<configuration>
 									<type>existing</type>
-    								<home>F:\developpement\git\Jenkins\jboss-eap-6.3\standalone</home>
+    								<home>${server.jboss.url}/standalone</home>
 
 								<properties>
 									<cargo.servlet.port>8080</cargo.servlet.port>
@@ -171,7 +165,7 @@
       									<groupId>com.ibm.artifact</groupId>
 										<artifactId>artifact-web</artifactId>
 										<type>war</type>
-										<pingURL>http://localhost:8080/artifact-web/index.jsp</pingURL>
+										<pingURL>${application.url}</pingURL>
 										<pingTimeout>200000</pingTimeout>
 									</deployable>
 								</deployables>
@@ -245,6 +239,7 @@
 			</activation>
 			<build>
 				<plugins>
+				<!--
 					<plugin>
 						<artifactId>maven-clean-plugin</artifactId>
 						<version>${maven.clean.plugin.version}</version>
@@ -260,6 +255,7 @@
 							</filesets>
 						</configuration>
 					</plugin>
+					-->
 				</plugins>
 			</build>
 		</profile>
@@ -290,13 +286,14 @@
 							<goal>exec</goal>
 						</goals>
 					</execution>
+					
+					<!-- NPM
 					<execution>
 						<id>npm-install</id>
 						<phase>prepare-package</phase>
 						<configuration>
 							<executable>npm</executable>
 							<arguments>
-
 								<argument>install</argument>
 							</arguments>
 						</configuration>
@@ -304,7 +301,22 @@
 							<goal>exec</goal>
 						</goals>
 					</execution>
-					<!--
+					-->
+					<!-- Bower -->
+					<execution>
+						<id>bower-default</id>
+						<phase>prepare-package</phase>
+						<configuration>
+							<executable>bower</executable>
+							<arguments>
+								<argument>install</argument>
+							</arguments>
+						</configuration>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+					</execution>
+					<!-- Grunt-->
 					<execution>
 						<id>grunt-default</id>
 						<phase>prepare-package</phase>
@@ -316,7 +328,7 @@
 							<goal>exec</goal>
 						</goals>
 					</execution>
-					-->
+					
 
 				</executions>
 			</plugin>

@@ -42,3 +42,9 @@ mvn clean install -Dbuild=jenkins
 ```xml
 curl --request POST -u admin:admin "http://localhost:8180/jenkins/job/jenkins-web-internet/lastBuild/stop"
 ```
+
+# Suppression Configuration Jenkins sur Mac OS X
+
+```xml
+sudo rm -rf /var/root/.jenkins ~/.jenkins
+```

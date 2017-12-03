@@ -77,6 +77,10 @@
         <!-- Cargo -->
         <cargo.version>1.6.5</cargo.version>
 
+        <!-- Jenkins -->
+        <server.jboss.url>/developpement/projets/git/Jenkins/web-internet/jboss-eap-6.3</server.jboss.url>
+        <application.url>http://localhost:8080/artifact-web/index.jsp</application.url>
+
     </properties>
 
     <dependencies>

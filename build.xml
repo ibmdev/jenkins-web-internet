@@ -2,14 +2,14 @@
 <project name="Jenkins Deploy EAR" default="deployEAR" basedir="."> 
 	<target name="uninstallEAR">
     <delete>
-      <fileset dir="F:\developpement\git\Jenkins\jboss-eap-6.3\standalone\deployments">
+      <fileset dir="/developpement/projets/git/Jenkins/web-internet/jboss-eap-6.3/standalone/deployments">
         <include name="*"/>
       </fileset>
     </delete>
 	</target>
   <target name="deployEAR"> 
-  <copy todir="F:\developpement\git\Jenkins\jboss-eap-6.3\standalone\deployments" >
-      <fileset dir="F:\developpement\git\Jenkins\jenkins-web-internet\artifact-web\target" >
+  <copy todir="/developpement/projets/git/Jenkins/web-internet/jboss-eap-6.3/standalone/deployments" >
+      <fileset dir="/developpement/projets/git/Jenkins/web-internet/jenkins-web-internet/artifact-web/target" >
         <include name="artifact-web.war"/>
       </fileset>
     </copy>
