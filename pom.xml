@@ -11,7 +11,7 @@
   <modules>
      <module>artifact-service</module>
      <module>artifact-web</module>
-     <module>artifact-ear</module>
+    
 		 
    </modules>
    

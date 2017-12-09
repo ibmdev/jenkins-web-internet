@@ -116,12 +116,12 @@
 				<plugins>
 
 					
-					<!-- Cargo Plugin-->
+					<!-- Cargo Plugin
 					<plugin>
 						<groupId>org.codehaus.cargo</groupId>
 						<artifactId>cargo-maven2-plugin</artifactId>
 						<version>${cargo.version}</version>
-						<!-- Stop JBoss Server -->
+						
 						<executions>
 							<execution>
 								<id>Stop JBoss Server</id>
@@ -143,7 +143,8 @@
 									<goal>stop</goal>
 								</goals>
 							</execution>
-							<!-- Start JBoss Server -->
+							-->
+							<!-- Start JBoss Server
 							<execution>
 								<id>Start JBoss Server</id>
 								<phase>integration-test</phase>
@@ -176,7 +177,8 @@
 							</execution>
 						</executions>
 					</plugin>
-					<!-- Ant Plugin -->
+					-->
+					<!-- Ant Plugin
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-antrun-plugin</artifactId>
@@ -226,6 +228,7 @@
 							</execution>
 						</executions>
 					</plugin>
+					-->
 				</plugins>
 			</build>
 		</profile>
