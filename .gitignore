@@ -7,3 +7,5 @@ artifact-service/.settings/
 *.classpath
 artifact-web/.settings/
 .settings/
+.idea/
+*.iml
