@@ -116,26 +116,26 @@
 				<plugins>
 
 					
-					<!-- Cargo Plugin-->
+					<!-- Cargo Plugin -->
 					<plugin>
 						<groupId>org.codehaus.cargo</groupId>
 						<artifactId>cargo-maven2-plugin</artifactId>
 						<version>${cargo.version}</version>
-						<!-- Stop JBoss Server -->
+						
 						<executions>
 							<execution>
 								<id>Stop JBoss Server</id>
 								<phase>post-integration-test</phase>
 								<configuration>
 									<container>
-										<containerId>jboss74x</containerId>
+										<containerId>${cargo.jboss.container.type}</containerId>
 										<home>${server.jboss.url}</home>
 									</container>
 								<configuration>
 									<type>existing</type>
     								<home>${server.jboss.url}/standalone</home>
 								<properties>
-									<cargo.servlet.port>8080</cargo.servlet.port>
+									<cargo.servlet.port>${cargo.servlet.port}</cargo.servlet.port>
 								</properties>
 								</configuration>
 								</configuration>
@@ -143,21 +143,22 @@
 									<goal>stop</goal>
 								</goals>
 							</execution>
-							<!-- Start JBoss Server -->
+							
 							<execution>
 								<id>Start JBoss Server</id>
 								<phase>integration-test</phase>
 								<configuration>
 									<container>
-										<containerId>jboss74x</containerId>
+										<containerId>${cargo.jboss.container.type}</containerId>
 										<home>${server.jboss.url}</home>
+										 <timeout>200000</timeout>
 									</container>
 								<configuration>
 									<type>existing</type>
     								<home>${server.jboss.url}/standalone</home>
 
 								<properties>
-									<cargo.servlet.port>8080</cargo.servlet.port>
+									<cargo.servlet.port>${cargo.servlet.port}</cargo.servlet.port>
 								</properties>
 								</configuration>
 								<deployables>
@@ -166,7 +167,6 @@
 										<artifactId>artifact-web</artifactId>
 										<type>war</type>
 										<pingURL>${application.url}</pingURL>
-										<pingTimeout>200000</pingTimeout>
 									</deployable>
 								</deployables>
 								</configuration>
@@ -176,6 +176,7 @@
 							</execution>
 						</executions>
 					</plugin>
+					
 					<!-- Ant Plugin -->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -197,12 +198,12 @@
 								</goals>
 							</execution>
 							<execution>
-								<id>uninstallEAR</id>
+								<id>uninstallWAR</id>
 								<phase>pre-clean</phase>
 								<configuration>
 								<target>
 									<ant antfile="${basedir}/../build.xml">
-									<target name="uninstallEAR"/>
+									<target name="uninstallWAR"/>
 									</ant>
 								</target>
 								</configuration>
@@ -211,12 +212,12 @@
 								</goals>
 							</execution>
 							<execution>
-								<id>deployEAR</id>
+								<id>deployWAR</id>
 								<phase>pre-integration-test</phase>
 								<configuration>
 								<target>
 									<ant antfile="${basedir}/../build.xml">
-									<target name="deployEAR"/>
+									<target name="deployWAR"/>
 									</ant>
 								</target>
 								</configuration>
