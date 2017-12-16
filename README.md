@@ -19,6 +19,7 @@ Software Requirements :
 JDK : 8
 ANT : 1.10.1
 Maven : 3.5
+JBoss EAP 6.1
 settings.xml : 
 
 <activeProfiles>
@@ -36,6 +37,13 @@ Nom de la branche courante : */master
 ```xml
 mvn clean install -Dbuild=jenkins
 ```
+
+## JBOSS EAP 6.1
+
+```xml
+Startup Script sur port 8080 (par défaut) : F:\developpement\git\Jenkins\jboss-eap-6.1\bin\standalone.bat -Djboss.server.base.dir=F:/developpement/git/Jenkins/jboss-eap-6.1/server/artifact-d3
+```
+
 
 ## Script Shell
 
