@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project name="Jenkins Deploy EAR" default="deployEAR" basedir="."> 
-	<target name="uninstallEAR">
+<project name="Jenkins Deploy WAR" default="deployWAR" basedir="."> 
+<property name="com.ibm.deployment" value="F:/developpement/git/Jenkins/jboss-eap-6.1/standalone/deployments"/>
+<property name="com.ibm.target" value="F:/developpement/git/Jenkins/jenkins-web-internet/artifact-web/target"/>
+<property name="com.ibm.war" value="artifact-web.war"/>
+
+<target name="uninstallWAR">
     <delete>
-      <fileset dir="/developpement/projets/git/Jenkins/web-internet/jboss-eap-6.3/standalone/deployments">
+      <fileset dir="${com.ibm.deployment}">
         <include name="*"/>
       </fileset>
     </delete>
 	</target>
-  <target name="deployEAR"> 
-  <copy todir="/developpement/projets/git/Jenkins/web-internet/jboss-eap-6.3/standalone/deployments" >
-      <fileset dir="/developpement/projets/git/Jenkins/web-internet/jenkins-web-internet/artifact-web/target" >
-        <include name="artifact-web.war"/>
+  <target name="deployWAR"> 
+  <copy todir="${com.ibm.deployment}" >
+      <fileset dir="${com.ibm.target}" >
+        <include name="${com.ibm.war}"/>
       </fileset>
     </copy>
   </target>  
