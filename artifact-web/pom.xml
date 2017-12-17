@@ -133,7 +133,7 @@
 									</container>
 								<configuration>
 									<type>existing</type>
-    								<home>${server.jboss.url}/standalone</home>
+    								<home>${server.jboss.url}/server/artifact-d3</home>
 								<properties>
 									<cargo.servlet.port>${cargo.servlet.port}</cargo.servlet.port>
 								</properties>
@@ -155,7 +155,7 @@
 									</container>
 								<configuration>
 									<type>existing</type>
-    								<home>${server.jboss.url}/standalone</home>
+    								<home>${server.jboss.url}/server/artifact-d3</home>
 
 								<properties>
 									<cargo.servlet.port>${cargo.servlet.port}</cargo.servlet.port>
