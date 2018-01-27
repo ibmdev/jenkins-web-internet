@@ -48,3 +48,16 @@ curl --request POST -u admin:admin "http://localhost:8180/jenkins/job/jenkins-we
 ```xml
 sudo rm -rf /var/root/.jenkins ~/.jenkins
 ```
+
+# Documentation sur la gestion des Properties Sources
+
+https://www.mkyong.com/spring/spring-propertysources-example/
+
+http://javaetmoi.com/2014/06/spring-framework-java-configuration/
+
+https://docs.spring.io/spring/docs/3.0.0.M3/reference/html/ch04s11.html
+
+https://examples.javacodegeeks.com/enterprise-java/spring/load-environment-configurations-and-properties-with-spring-example/
+
+http://javasampleapproach.com/spring-framework/inject-properties-using-value-annotations-vs-environment-vs-configurationproperties
+

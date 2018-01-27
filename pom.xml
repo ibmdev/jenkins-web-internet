@@ -91,6 +91,7 @@
             <artifactId>findbugs-maven-plugin</artifactId>
             <version>${findbugs.version}</version>
             <type>jar</type>
+            <scope>test</scope>
         </dependency>
     </dependencies>
      <build>

@@ -6,8 +6,6 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-
-
 <meta content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width" name="viewport">
 	<!-- CSS -->
 
@@ -42,13 +40,13 @@
 	<script src="src/private/fonction/fonction.module.js"></script>
 	<script src="src/private/fonction/fonction.service.js"></script>
 	<script src="src/private/fonction/fonction.controller.js"></script>
-	
-
 
 </head>
 
 <body>
 	<div ui-view></div>
+Spring
+
 </body>
 
 </html>
