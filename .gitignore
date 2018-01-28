@@ -1,11 +1,11 @@
 artifact-web/node_modules/
 artifact-web/src/main/webapp/components/
 artifact-web/src/main/webapp/build/
-artifact-service/.settings/
-*.project
-*.factorypath
+artifact-web/src/main/webapp/dist/
 *.classpath
+*.project
 artifact-web/.settings/
-.settings/
-.idea/
 *.iml
+*.factorypath
+artifact-service/.settings/
+artifact-ear/.settings/

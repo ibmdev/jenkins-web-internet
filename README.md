@@ -48,3 +48,23 @@ curl --request POST -u admin:admin "http://localhost:8180/jenkins/job/jenkins-we
 ```xml
 sudo rm -rf /var/root/.jenkins ~/.jenkins
 ```
+
+# Angular CLI
+
+1) Installation gloable de Angular-CLI 
+npm install -g @angular/cli
+
+2) Création d'une nouvelle structure de projet Angular
+ng new artifact-web
+
+# Rangle.io
+
+https://angular-2-training-book.rangle.io/handout/testing/intro-to-tdd/setup/karma-config.html
+
+https://stackoverflow.com/questions/38532210/how-to-integrate-angular-2-java-maven-web-application
+
+
+
+
+
+

@@ -352,6 +352,9 @@
 				<configuration>
 					<source>${jdk7.version}</source>
 					<target>${jdk7.version}</target>
+					 <excludes>
+						<exclude>ng/**</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 
