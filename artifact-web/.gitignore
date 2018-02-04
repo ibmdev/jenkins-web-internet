@@ -1,2 +1,7 @@
-/.apt_generated/
+/target
+/target
+/target
 /target/
+/bin/
+/target
+/.apt_generated/

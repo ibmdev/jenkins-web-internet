@@ -9,6 +9,5 @@
   "onecase":   true,
   "lastsemic": true,
   "validthis": true,  
-  "jasmine": true,
   "predef": ["angular","$","_","MobileDetect"]
 }
