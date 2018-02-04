@@ -48,3 +48,10 @@ curl --request POST -u admin:admin "http://localhost:8180/jenkins/job/jenkins-we
 ```xml
 sudo rm -rf /var/root/.jenkins ~/.jenkins
 ```
+
+
+# Controller REST
+
+Url local getAll Apples : http://localhost:8080/artifact-web/api/apples/getAll
+
+
