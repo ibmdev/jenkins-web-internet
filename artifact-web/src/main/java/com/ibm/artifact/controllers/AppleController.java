@@ -1,5 +1,6 @@
 package com.ibm.artifact.controllers;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.util.ArrayList;
@@ -25,8 +26,8 @@ public class AppleController {
 	ObjectMapper mapper = new ObjectMapper();
 	ApplicationContext contextSpring = null;
 	
-	@RequestMapping(value="/getAll", produces="application/json")
-	public @ResponseBody List<Apple> getApples() {
+	@RequestMapping(value="/getAll/json", produces="application/json")
+	public @ResponseBody List<Apple> getApplesFromJson() {
 		
 		List<Apple> response = new ArrayList<Apple>();
 		try {
@@ -45,15 +46,22 @@ public class AppleController {
 		return response;
 	}
 	
+	@RequestMapping(value="/getAll/db", produces="application/json")
+	public @ResponseBody List<Apple> getApplesFromDB() {
+		
+		List<Apple> response = new ArrayList<Apple>();
+		return response;
+	}
+	
+	
 	private List<Apple> convertStreamToApples(InputStream stream) {
 		List<Apple> liste = new ArrayList<>();
+		StringWriter writer = new StringWriter();
 		try {
-			StringWriter writer = new StringWriter();
 			IOUtils.copy(stream, writer, "UTF-8");
 			String json = writer.toString();
 			liste = Arrays.asList(mapper.readValue(json, Apple[].class));
-		}
-		catch(Exception e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return liste;

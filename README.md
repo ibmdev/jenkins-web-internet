@@ -52,6 +52,6 @@ sudo rm -rf /var/root/.jenkins ~/.jenkins
 
 # Controller REST
 
-Url local getAll Apples : http://localhost:8080/artifact-web/api/apples/getAll
+Url local getAll Apples : http://localhost:8080/artifact-web/api/apples/getAll/db
 
 
