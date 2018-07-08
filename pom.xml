@@ -24,7 +24,7 @@
 
         
           <!-- JDK -->
-          <jdk7.version>1.7</jdk7.version>
+          <jdk7.version>1.8</jdk7.version>
           
           <!-- BUILD PLUGIN -->
           <version.compiler.plugin>2.3.1</version.compiler.plugin>
@@ -83,6 +83,7 @@
         <cargo.jboss.container.type>jboss72x</cargo.jboss.container.type>
         <cargo.servlet.port>8080</cargo.servlet.port>
 
+        <concurrent-junit-version>1.0.2</concurrent-junit-version>
     </properties>
 
     <dependencies>

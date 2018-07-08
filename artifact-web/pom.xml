@@ -113,145 +113,12 @@
 
     </dependencies>
 
-	<profiles>
-		<profile>
-			<id>jenkins</id>
-			<activation>
-				<property>
-					<name>build</name>
-					<value>jenkins</value>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-
-					
-					<!-- Cargo Plugin -->
-					<plugin>
-						<groupId>org.codehaus.cargo</groupId>
-						<artifactId>cargo-maven2-plugin</artifactId>
-						<version>${cargo.version}</version>
-						
-						<executions>
-							<execution>
-								<id>Stop JBoss Server</id>
-								<phase>post-integration-test</phase>
-								<configuration>
-									<container>
-										<containerId>${cargo.jboss.container.type}</containerId>
-										<home>${server.jboss.url}</home>
-									</container>
-								<configuration>
-									<type>existing</type>
-    								<home>${server.jboss.url}/standalone</home>
-								<properties>
-									<cargo.servlet.port>${cargo.servlet.port}</cargo.servlet.port>
-								</properties>
-								</configuration>
-								</configuration>
-								<goals>
-									<goal>stop</goal>
-								</goals>
-							</execution>
-							
-							<execution>
-								<id>Start JBoss Server</id>
-								<phase>integration-test</phase>
-								<configuration>
-									<container>
-										<containerId>${cargo.jboss.container.type}</containerId>
-										<home>${server.jboss.url}</home>
-										 <timeout>200000</timeout>
-									</container>
-								<configuration>
-									<type>existing</type>
-    								<home>${server.jboss.url}/standalone</home>
-
-								<properties>
-									<cargo.servlet.port>${cargo.servlet.port}</cargo.servlet.port>
-								</properties>
-								</configuration>
-								<deployables>
-									<deployable>
-      									<groupId>com.ibm.artifact</groupId>
-										<artifactId>artifact-web</artifactId>
-										<type>war</type>
-										<pingURL>${application.url}</pingURL>
-									</deployable>
-								</deployables>
-								</configuration>
-								<goals>
-									<goal>start</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					
-					<!-- Ant Plugin -->
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-antrun-plugin</artifactId>
-						<version>${maven.ant.plugin.version}</version>
-						<executions>
-							<execution>
-								<id>testsIntegration</id>
-								<phase>integration-test</phase>
-								<configuration>
-								<target>
-									<ant antfile="${basedir}/../build.xml">
-									<target name="testsIntegration"/>
-									</ant>
-								</target>
-								</configuration>
-								<goals>
-									<goal>run</goal>
-								</goals>
-							</execution>
-							<execution>
-								<id>uninstallWAR</id>
-								<phase>pre-clean</phase>
-								<configuration>
-								<target>
-									<ant antfile="${basedir}/../build.xml">
-									<target name="uninstallWAR"/>
-									</ant>
-								</target>
-								</configuration>
-								<goals>
-									<goal>run</goal>
-								</goals>
-							</execution>
-							<execution>
-								<id>deployWAR</id>
-								<phase>pre-integration-test</phase>
-								<configuration>
-								<target>
-									<ant antfile="${basedir}/../build.xml">
-									<target name="deployWAR"/>
-									</ant>
-								</target>
-								</configuration>
-								<goals>
-									<goal>run</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>dev</id>
-			<activation>
-				<property>
-					<name>build</name>
-					<value>dev</value>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-				<!--
-					<plugin>
+	<build>
+		<finalName>artifact-web</finalName>
+		<plugins>
+		
+		
+			<plugin>
 						<artifactId>maven-clean-plugin</artifactId>
 						<version>${maven.clean.plugin.version}</version>
 						<configuration>
@@ -266,15 +133,6 @@
 							</filesets>
 						</configuration>
 					</plugin>
-					-->
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
-
-	<build>
-		<finalName>artifact-web</finalName>
-		<plugins>
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -298,7 +156,7 @@
 						</goals>
 					</execution>
 					
-					<!-- NPM
+					<!-- NPM -->
 					<execution>
 						<id>npm-install</id>
 						<phase>prepare-package</phase>
@@ -312,7 +170,7 @@
 							<goal>exec</goal>
 						</goals>
 					</execution>
-					-->
+					
 					<!-- Bower -->
 					<execution>
 						<id>bower-default</id>
