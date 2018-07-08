@@ -35,10 +35,10 @@ public class Boolean01Test {
 		ServiceProviderManager01.registerDriver(d);
 		Assert.assertEquals(1, ServiceProviderManager01.getRegistereddrivers().size());
 		
-		// Some common names for static factory methods
-		// From : A type-conversion method that takes a single parameter and returns a corresponding instance of this type
+		// Quelques conventions de nommage pour les méthodes factory static
+		// From : Méthode qui prend en entrée un paramètre et retourne une instance d'un objet correspondant à ce type
 		Boolean b4 = Boolean01.from(true);
-		// of : An aggregation method that takes multiple parameters and returns an instance of this type that incorporates them
+		// of : Une méthode d'aggrégation qui prend de multiples paramètres et retourne une instance de ce type qui incorpore tous ces objets
 		Set<Boolean> setBoolean = Boolean01.of(true, false,true);
 		
 		// Print
