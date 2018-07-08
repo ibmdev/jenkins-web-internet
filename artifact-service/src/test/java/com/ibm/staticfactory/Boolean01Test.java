@@ -1,16 +1,19 @@
-package com.ibm;
+package com.ibm.staticfactory;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-public class StaticFactory01Test {
+import com.ibm.staticfactory.Boolean01;
+import com.ibm.staticfactory.IBoolean01;
+
+public class Boolean01Test {
 	
 	@Test
 	public void booleanValueOf() {
 		System.out.println("****** Début du test booleanValueOf ******* ");
-		Boolean b1 = StaticFactory01.valueOf(true);
-		Boolean b2 = StaticFactory01.valueOf(false);
-		Boolean b3 = IStaticFactory01.valueOf(false);
+		Boolean b1 = Boolean01.valueOf(true);
+		Boolean b2 = Boolean01.valueOf(false);
+		Boolean b3 = IBoolean01.valueOf(false);
 		System.out.println("HashCode B1 : "+ b1.hashCode());
 		System.out.println("HashCode B2 : "+ b2.hashCode());
 		System.out.println("HashCode B3 : "+ b3.hashCode());

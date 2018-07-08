@@ -1,6 +1,6 @@
-package com.ibm;
+package com.ibm.staticfactory;
 
-public interface IStaticFactory01 {
+public interface IBoolean01 {
 	
 	public static Boolean valueOf(boolean b) {return b? Boolean.TRUE: Boolean.FALSE;}
 

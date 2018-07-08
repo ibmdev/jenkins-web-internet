@@ -1,10 +1,10 @@
-package com.ibm;
+package com.ibm.staticfactory;
 
-public class StaticFactory01 {
+public class Boolean01 {
 	
 	// On définit le constructeur comme privé et non instanciable pour obliger à utiliser 
 	// les méthodes de fabrication
-	private StaticFactory01() {throw new UnsupportedOperationException();}
+	private Boolean01() {throw new UnsupportedOperationException();}
 	
 	// Avantages à utiliser des méthodes factory statique à la place des constructeurs
 	// 1) Possibilité de personnaliser les noms des méthodes, meilleure compréhension pour le développeur
