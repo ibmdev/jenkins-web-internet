@@ -1,7 +1,7 @@
 # jenkins-web-internet
 
 ```xml
-URL Localhost : http://localhost:8080/artifact-web/index.jsp
+URL Localhost : http://localhost:8080/artifact-web/index.html
 ```
 
 # Mise à jour informations git
@@ -48,3 +48,19 @@ curl --request POST -u admin:admin "http://localhost:8180/jenkins/job/jenkins-we
 ```xml
 sudo rm -rf /var/root/.jenkins ~/.jenkins
 ```
+
+## Google Analytics Fundamentals
+
+# GA Account Structure and Administration
+
+Login : ibmdev102017
+Tracking ID : UA-122653423-1
+
+Next course : "Hits, Sessions, and Users" p6
+Reports and Data Structures in GA p7
+https://analytics.google.com/analytics/academy/course/6/unit/1/lesson/3
+
+
+
+
+
