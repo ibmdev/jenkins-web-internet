@@ -60,6 +60,9 @@ Next course : "Hits, Sessions, and Users" p6
 Reports and Data Structures in GA p7
 https://analytics.google.com/analytics/academy/course/6/unit/1/lesson/3
 
+## Exemple de librairie Angular Google Analytics
+https://github.com/revolunet/angular-google-analytics
+
 
 
 
