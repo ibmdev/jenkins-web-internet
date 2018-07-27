@@ -63,6 +63,11 @@ https://analytics.google.com/analytics/academy/course/6/unit/1/lesson/3
 ## Exemple de librairie Angular Google Analytics
 https://github.com/revolunet/angular-google-analytics
 
+## Ecrire une librairie Javascript Open Source
+
+https://egghead.io/lessons/javascript-introduction-to-how-to-write-an-open-source-javascript-library
+
+
 
 
 
