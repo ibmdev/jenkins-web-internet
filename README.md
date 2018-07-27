@@ -48,3 +48,11 @@ curl --request POST -u admin:admin "http://localhost:8180/jenkins/job/jenkins-we
 ```xml
 sudo rm -rf /var/root/.jenkins ~/.jenkins
 ```
+
+## Bots Development
+
+https://chatbotslife.com/writing-a-bot-using-microsoft-bot-framework-in-node-and-typescript-5d62878eb69d
+
+https://github.com/JonJam/microsoftbotframework-node-ts/blob/master/package.json
+
+
